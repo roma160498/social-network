@@ -1,0 +1,86 @@
+:host ::ng-deep input {
+	outline: none;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	width: 100%;
+	background: #fff;
+	margin-bottom: 4%;
+	border: 1px solid #ccc;
+	padding: 2%;
+	color: #555;
+	/* font: 100% Arial, Helvetica, sans-serif; */
+}
+
+:host ::ng-deep input[type="text"]:focus,
+:host ::ng-deep input[type="password"]:focus {
+	box-shadow: 0 0 5px rgba(29, 54, 139, 0.4);
+	border: 1px solid rgba(29, 54, 139, 0.4);
+}
+
+:host ::ng-deep input[type="text"].invalid,
+:host ::ng-deep input[type="password"].invalid {
+	box-shadow: 0 0 5px rgb(240, 58, 58);
+	border: 1px solid rgb(240, 58, 58);
+}
+
+:host ::ng-deep input[type="submit"],
+:host ::ng-deep input[type="button"]{
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	width: 100%;
+	padding: 3%;
+	background: #77A6F7;
+	border-top-style: none;
+	border-right-style: none;
+	border-left-style: none;	
+	color: #fff;
+	margin: 0;
+}
+
+:host ::ng-deep input[type="button"].btn-cancel {
+	background: #ccc;
+	color: black;
+}
+
+:host ::ng-deep input[type="button"].btn-cancel:hover {
+	background: rgba(0, 0, 0, 0.4);
+}
+
+:host ::ng-deep input[type="submit"]:hover,
+:host ::ng-deep input[type="button"]:hover{
+    background: #4889f4;
+    cursor: pointer;
+}
+
+:host ::ng-deep input[type="submit"]:disabled,
+:host ::ng-deep input[type="button"]:disabled{
+    background: #77A6F74D;
+    cursor: pointer;
+}
+
+:host ::ng-deep .main-page-background {
+    position: absolute;
+    height: 537px;
+	width: 100%;
+	/* 1260px; */
+	background-image: url("/assets/main-page-back1.png");
+	background-position-x: center;
+	background-size: contain;
+    background-repeat: no-repeat;
+    transform: translate(-50%, 0);
+    left: 50%;
+    top: 550px;
+}
+
+:host ::ng-deep .background-image-container {
+	/* position: relative;
+	top: 200px;
+	width: 100% */
+}
+
+:host ::ng-deep .background-image-container > img {
+	height: 380px;
+    /* width: 100%; */
+}

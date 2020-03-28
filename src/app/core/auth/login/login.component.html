@@ -1,0 +1,27 @@
+<div class="flex-col-container full-height">
+    <div class="flex-row-container login-entry content">
+        <div class="login-image-contatiner">
+            <img src="../../../../assets/img.png" style="height: 420px" />
+        </div>
+        <div class="entry-point-area">
+            <div class="login-area">
+                <h1 class="card-header app-title">Snappy</h1>
+                <form #loginForm="ngForm" (ngSubmit)="onSubmit()">
+                    <input type="text" [(ngModel)]="login" name="login" #loginControl="ngModel" placeholder="Login" required/>
+                    <input type="password" [(ngModel)]="password" name="password" #passwordControl="ngModel" placeholder="Password" required/>
+                    <input type="submit" value="Sign In" [disabled]="loginControl.invalid || passwordControl.invalid" />
+                </form>
+                <div class="separator"></div>
+                <p class="restore-pswd-link">
+                    <a href="/password/reset">Forget your password?</a>
+                </p>
+            </div>
+            <div class="register-area">
+                <p>If you don't have an account, you can
+                    <a href="/join">Sing Up</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <app-footer class="footer"></app-footer>
+</div>

@@ -1,0 +1,26 @@
+<div class="flex-col-container full-height">
+    <div class="entry-point-area content">
+        <div class="register-area">
+            <h1 class="card-header app-title">Snappy</h1>
+            <p>Register to be on touch with your friends.</p>
+            <form #registerForm="ngForm" (ngSubmit)="onSubmit(registerForm)">
+                <input type="text" [(ngModel)]="user.fullname" name="fullname" placeholder="Name and surname" #fullname="ngModel" [className]="!fullname.valid && !fullname.untouched ? 'invalid' : ''"
+                    (input)="onInput()" required/>
+                <input type="text" [(ngModel)]="user.login" name="login" placeholder="Login" #login="ngModel" required [className]="!login.valid && !login.untouched ? 'invalid' : ''"
+                    (input)="onInput()" />
+                <input type="text" [(ngModel)]="user.email" name="email" placeholder="Email" #email="ngModel" required email [className]="!email.valid && !email.untouched ? 'invalid' : ''"
+                    (input)="onInput()" />
+                <input type="password" [(ngModel)]="user.password" name="password" placeholder="Password" #password="ngModel" required [className]="!password.valid && !password.untouched ? 'invalid' : ''"
+                    (input)="onInput()" />
+                <input type="submit" value="Sign Up" />
+                <validation-error #validator [formForValidation]="registerForm"></validation-error>
+            </form>
+        </div>
+        <div class="login-area">
+            <p>Do you have an account?
+                <a href="/login">Sing In</a>
+            </p>
+        </div>
+    </div>
+    <app-footer class="footer"></app-footer>
+</div>
